@@ -56,7 +56,7 @@ This page will show you some considerations you should take while running hashiC
 4. Upgrade Vault frequently
 5. Stop using root tokens
    - _Root token have unrestrited access and no TTL_
-   - _Get rid of it after the initial. You can regenerate a root token in case of emergency_
+   - _Get rid of it after the initial. You can regenerate a root token in case of emergency_ (`vault operator generate-root -generate-otp`)
 6. Always check the integrity of the Vault binary.
    - _You can use HashiCopr checksun to validate._
 7. Disable the UI if not in use
