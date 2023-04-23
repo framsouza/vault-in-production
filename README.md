@@ -61,7 +61,7 @@ This page will show you some considerations you should take while running hashiC
    - _You can use HashiCopr checksun to validate._
 7. Disable the UI if not in use
 8. Secure the Unseal/Recovery Keys
-   - _You should initialize Vault using PGP keys, it will distribute to multiple team members and no single person should have all the keys._
+   - _You should initialize Vault using PGP keys, it will distribute to multiple team members and no single person should have all the keys._ (eg, `vault operator init -format=json -key-shares=3 -key-threshold=2 -pgp-keys="alexis.pub, gabriel.pub, henry.pub" > /home/bob/init.json`)
 9. Use the smalles TTL possible for tokens and leases
    - _ It helps to reduce burden on the storage backend because the experied tokens are purged from Vault._
    - _It prevents renewals beyon reasonble timeframe_
