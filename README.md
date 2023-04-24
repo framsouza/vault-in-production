@@ -72,6 +72,7 @@ This page will show you some considerations you should take while running hashiC
    - _Regular test backups to ensure functionality_.
 12. Integrate Existing Identity Providers
    - _Do not use Vault local user/pass._
+13. Aim to use dynamic secrets rather than static secrets
    
 # Vault enterprise features you should explore
 Here are some exclusively enterprise features you should consider explore:
