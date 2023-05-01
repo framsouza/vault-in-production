@@ -6,6 +6,7 @@ This page will show you some considerations you should take while running hashiC
 2. [Operating Systems](#operating-systems)
 3. [Vault Configurations](#vault-configurations)
 4. [When to alert](#when-to-alert)
+5. [Running Vault on Kubernetes](#running-vault-on-kubernetes)
 
 # Recommendations
 
@@ -94,3 +95,21 @@ Here are some exclusively enterprise features you should consider explore:
 - Audit lgs Failures
 - Transit Key Deletion
 - Cloud-based resources changes
+
+### Running Vault on Kubernetes
+If you're running Vault on Kubernetes, make sure you're:
+- Running vault on a dedicated Kubernetes cluster
+- Don't offload TLS at the load balancer
+- Ensures end-to-end encryption from the client to the Vault node
+- Use TLS certificates signed by a trusted CA
+- Disable Core Dumps
+- Ensure `RLIMIT_CORE` is set to 0
+- Ensure mlock is enabled and the `IPC_LOCK` capability is set
+```
+ securityContext:
+    runAsNonRoot: true
+    runAsUSer: 1000
+    capabilities:
+      add: ["IPC_LOCK"]
+ ```
+ - Never starts vault as root 
