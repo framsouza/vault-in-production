@@ -1,6 +1,6 @@
 # HashiCorp Vault considerations for production environments
 
-This page will show you some considerations you should take while running hashiCorp Vault in a production environment. This doc also assumes you have the basic Vault knoweldge. 
+This page will show you some considerations you should consider while running hashiCorp Vault in a production environment. It also assumes you have the basic Vault knoweldge. 
 
 1. [General Recommendations](#general-recommendations)
 2. [Operating Systems](#operating-systems)
