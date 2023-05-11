@@ -22,7 +22,7 @@ This page will show you some considerations you should consider while running ha
    - _Default ports: Vault: 8200, 8201 | Consul: 8500, 8201,8301._
    - _If you're using a Cloud Platform to authenticate to Vault, you'll have to allow also tcp/443._
    - _If you're using Vault Secret Database, make sure to allow port 3306._
-   - _If you're authenticating with LDAP, the port used is tcp/389._
+   - _If you're authenticating with LDAP, the port used is tcp/636 (ldap over ssl)._
    - _If you're using Consul, make sure the [network diagram](https://developer.hashicorp.com/vault/tutorials/day-one-consul/reference-architecture#recommended-architecture)_
    - _If you're using Raft, it does a make lot simpler, there's no need to open any extra port. Vault uses tcp/8200 for API communication ansd tcp/8201 for Raft Data Replication, see [diagram](https://developer.hashicorp.com/vault/tutorials/day-one-raft/raft-reference-architecture#recommended-architecture)_.
    
